@@ -146,7 +146,7 @@ C:\Python27\Lib
 We can check the version and then run python in our terminal to see if it is working:
 
 ```python
-python -V # type this command
+python -V # type this command. Note the capital V!
 Python 2.7.13  # if it outputs something like this, we have the right version. You might see 2.7.10 etc.
 python # type this command to start the python shell
 ```
@@ -155,19 +155,18 @@ When we start the python shell, it should look like:
 
 ![environment variables](windows4.png)
 
-If that didn't work in GitBash, open your `~/.bashrc` file in the text editor of your choice. At the bottom of that file, add the following line:
+If that didn't work in GitBash, open your `~/.bash_profile` file in the text editor of your choice. At the bottom of that file, add the following line:
 
-`alias python='winpty python.exe'`
+`alias python='winpty python.exe';`
 
-Congratulations! You now have an updated, working version of Python 2.7.x on your computer! You can type exit() in your Python shell to exit.
+Congratulations! You now have an updated, working version of Python 2.7.x on your computer! You can type `exit()` in your Python shell to exit.
 
-Installing Pip:
-We will be using Pip, which will allow us to download packages for us to use with Python. As of version 2.7.9, Pip was included as a Script in our Python download. Try running `python -m pip -V`. If it says something like pip 8.1.2 from ... then everything worked! However, if you have issues running the Pip command you may have to install it locally first. These directions here or here should help you install Pip.
+## A few words about Pip
+
+We will be using Pip, which will allow us to download packages for us to use with Python. As of version 2.7.9, Pip was included as a Script in our Python download. Try running `python -m pip -V`. If it says something like pip 8.1.2 from ... then everything worked! However, if you have issues running the Pip command you may have to install it locally first. These directions [here](https://pip.pypa.io/en/latest/installing/) or [here](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows) should help you install Pip.
 
 Some computers have issues with getting Pip to work in GitBash, even after their PATH variables are set and everything works in CMD.
 
 If your computer has this issue and you get an error like "'pip' is not recognized as an internal or external command", try typing the following into your GitBash terminal:
 
   `setx PATH "%PATH%;C:\Python27\Scripts"`
-
-Once you're done with that, you'll need to quit GitBash and restart the program.
