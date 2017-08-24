@@ -116,7 +116,10 @@ Congratulations! You now have an updated, working version of Python 2.7.x on you
 
 To install python, we will download Python directly from Python's website: [Download](https://www.python.org/downloads/release/python-2713/)
 
-We will have to set a PATH environment variable. To do this we navigate to our Advanced System Settings of your computer. Go to `Control Panel->Advanced System Settings-> Advanced-> Environment Variables`:
+You'll want the x86 64-bit version, unless your computer is 32-bit (likely only if it's more than 6 years old or so). Also, when installing, check the option that says 'add Python to your PATH variable'.
+
+
+We may have to set a PATH environment variable. To do this we navigate to our Advanced System Settings of your computer. Go to `Control Panel->Advanced System Settings-> Advanced-> Environment Variables`:
 
 ![environment variables](windows1.PNG)
 
@@ -148,9 +151,13 @@ Python 2.7.13  # if it outputs something like this, we have the right version. Y
 python # type this command to start the python shell
 ```
 
-When we start the python shell, it will look like:
+When we start the python shell, it should look like:
 
 ![environment variables](windows4.png)
+
+If that didn't work in GitBash, open your `~/.bashrc` file in the text editor of your choice. At the bottom of that file, add the following line:
+
+`alias python='winpty python.exe'`
 
 Congratulations! You now have an updated, working version of Python 2.7.x on your computer! You can type exit() in your Python shell to exit.
 
