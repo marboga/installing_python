@@ -1,4 +1,4 @@
-# Installing Python (OSX)
+# Installing Python (MacOS)
 ## If you're installing on PC, skip to that section.
 
 To install python, we will use homebrew, a package manager that helps us install software on our operating system.
